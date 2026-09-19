@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAKIN NETWORK - Toko Alat Jaringan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>YAKIN</span> NETWORK
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+
+            <div class="cart">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="subtitle">SOLUSI JARINGAN TERPERCAYA</p>
+            <h1>Lengkapi Kebutuhan<br><span>Jaringan Anda</span></h1>
+            <p>
+                Temukan berbagai macam alat jaringan berkualitas
+                untuk kebutuhan rumah, kantor, maupun bisnis.
+            </p>
+
+            <a href="#produk" class="btn">Lihat Produk</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="network-icon">🌐</div>
+        </div>
+    </section>
+
+    <!-- Kategori -->
+    <section class="categories">
+        <h2>Kategori Produk</h2>
+        <p class="section-desc">Berbagai kebutuhan jaringan tersedia di YAKIN NETWORK</p>
+
+        <div class="category-container">
+            <div class="category-card">
+                <div class="category-icon">📡</div>
+                <h3>Router</h3>
+                <p>Router untuk kebutuhan rumah dan kantor.</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🔌</div>
+                <h3>Kabel LAN</h3>
+                <p>Kabel jaringan berkualitas dan tahan lama.</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">💻</div>
+                <h3>Switch</h3>
+                <p>Switch untuk menghubungkan banyak perangkat.</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">📶</div>
+                <h3>Access Point</h3>
+                <p>Perangkat untuk memperluas jaringan WiFi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk -->
+    <section class="products" id="produk">
+        <h2>Produk Terlaris</h2>
+        <p class="section-desc">Pilihan alat jaringan yang populer</p>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <div class="product-image">📡</div>
+                <div class="product-info">
+                    <span class="product-category">ROUTER</span>
+                    <h3>Router WiFi AC1200</h3>
+                    <p>Router dual band dengan kecepatan tinggi.</p>
+                    <div class="product-bottom">
+                        <strong>Rp 350.000</strong>
+                        <button onclick="addCart()">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🔌</div>
+                <div class="product-info">
+                    <span class="product-category">KABEL</span>
+                    <h3>Kabel LAN Cat6</h3>
+                    <p>Kabel LAN Cat6 berkualitas untuk jaringan.</p>
+                    <div class="product-bottom">
+                        <strong>Rp 125.000</strong>
+                        <button onclick="addCart()">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">💻</div>
+                <div class="product-info">
+                    <span class="product-category">SWITCH</span>
+                    <h3>Switch 8 Port</h3>
+                    <p>Switch 8 port untuk kebutuhan jaringan.</p>
+                    <div class="product-bottom">
+                        <strong>Rp 275.000</strong>
+                        <button onclick="addCart()">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📶</div>
+                <div class="product-info">
+                    <span class="product-category">ACCESS POINT</span>
+                    <h3>Access Point WiFi</h3>
+                    <p>Perluas jangkauan WiFi di rumah atau kantor.</p>
+                    <div class="product-bottom">
+                        <strong>Rp 450.000</strong>
+                        <button onclick="addCart()">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🔧</div>
+                <div class="product-info">
+                    <span class="product-category">TOOLS</span>
+                    <h3>Tang Crimping RJ45</h3>
+                    <p>Alat crimping untuk pemasangan konektor RJ45.</p>
+                    <div class="product-bottom">
+                        <strong>Rp 85.000</strong>
+                        <button onclick="addCart()">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🔗</div>
+                <div class="product-info">
+                    <span class="product-category">KONEKTOR</span>
+                    <h3>Konektor RJ45</h3>
+                    <p>Konektor RJ45 untuk kabel jaringan.</p>
+                    <div class="product-bottom">
+                        <strong>Rp 30.000</strong>
+                        <button onclick="addCart()">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Promo -->
+    <section class="promo">
+        <div>
+            <p>DISKON SPESIAL</p>
+            <h2>Hemat hingga 20%</h2>
+            <p>Untuk pembelian produk jaringan tertentu.</p>
+        </div>
+        <a href="#produk" class="btn promo-btn">Belanja Sekarang</a>
+    </section>
+
+    <!-- Tentang -->
+    <section class="about" id="tentang">
+        <div class="about-content">
+            <span>TENTANG KAMI</span>
+            <h2>YAKIN NETWORK</h2>
+            <p>
+                YAKIN NETWORK adalah toko yang menyediakan berbagai
+                kebutuhan alat jaringan seperti router, switch,
+                kabel LAN, konektor RJ45, access point, dan berbagai
+                perlengkapan jaringan lainnya.
+            </p>
+            <p>
+                Kami menyediakan produk dengan harga terjangkau
+                untuk kebutuhan rumah, sekolah, kantor, dan bisnis.
+            </p>
+        </div>
+
+        <div class="about-box">
+            <div>
+                <h3>500+</h3>
+                <p>Produk Terjual</p>
+            </div>
+            <div>
+                <h3>100+</h3>
+                <p>Pelanggan</p>
+            </div>
+            <div>
+                <h3>24/7</h3>
+                <p>Layanan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section class="contact" id="kontak">
+        <h2>Hubungi Kami</h2>
+        <p class="section-desc">Butuh bantuan? Hubungi YAKIN NETWORK</p>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>YAKIN NETWORK</h3>
+                <p>📍 Jl. Contoh No. 123, Indonesia</p>
+                <p>📞 0812-3456-7890</p>
+                <p>✉️ yakin.network@email.com</p>
+            </div>
+
+            <form>
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">
+            <span>YAKIN</span> NETWORK
+        </div>
+
+        <p>
+            © 2026 YAKIN NETWORK. Semua Hak Dilindungi.
+        </p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addCart() {
+            cartCount++;
+            document.getElementById("cart-count").textContent = cartCount;
+
+            alert("Produk berhasil ditambahkan ke keranjang!");
+        }
+    </script>
+
+</body>
+</html>
