@@ -4,162 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alat-Alat Jaringan Komputer</title>
-    <!-- Tailwind CSS untuk styling modern -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome untuk ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts & FontAwesome untuk Ikon -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS STYLING KHUSUS (Warna Biru & Putih) -->
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Putih kebiruan lembut */
+            color: #334155;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: #0284c7; /* Biru terang */
+            color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            background: #ffffff;
+            color: #0284c7;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 1.5rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #e0f2fe;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Main Content & Grid */
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h3 {
+            font-size: 2rem;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .section-title p {
+            color: #64748b;
+            margin-top: 0.5rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card Alat Jaringan */
+        .card {
+            background-color: #ffffff; /* Putih bersih */
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.15);
+            border-color: #bae6fd;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e0f2fe; /* Biru muda */
+            color: #0284c7;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h4 {
+            font-size: 1.2rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        .card-footer {
+            margin-top: 1.5rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #f1f5f9;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #0284c7;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            padding: 1.5rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 4rem;
         }
     </style>
 </head>
-<body class="bg-blue-50/50 text-slate-800 min-h-screen flex flex-col justify-between">
+<body>
 
     <!-- Header / Navbar -->
-    <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="bg-white text-blue-600 p-2 rounded-lg shadow">
-                    <i class="fa-solid fa-network-wired text-xl"></i>
-                </div>
-                <h1 class="text-xl font-bold tracking-wide">NetTools ID</h1>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>NetTools ID</span>
             </div>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="#beranda" class="hover:text-blue-200 transition">Beranda</a>
-                <a href="#alat" class="hover:text-blue-200 transition">Daftar Alat</a>
-                <a href="#tentang" class="hover:text-blue-200 transition">Tentang</a>
-            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="beranda" class="bg-gradient-to-b from-blue-600 to-blue-700 text-white py-16 px-6 text-center shadow-inner">
-        <div class="max-w-3xl mx-auto">
-            <span class="bg-blue-500/80 text-blue-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Edukasi Jaringan Komputer</span>
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight">Mengenal Alat-Alat Jaringan</h2>
-            <p class="text-blue-100 text-base md:text-lg mb-8 leading-relaxed">
-                Panduan lengkap mengenai perangkat keras yang digunakan untuk membangun, mengelola, dan menghubungkan jaringan komputer.
-            </p>
-            <a href="#alat" class="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-6 py-3 rounded-xl shadow-lg transition duration-200 inline-flex items-center space-x-2">
-                <span>Jelajahi Alat</span>
-                <i class="fa-solid fa-arrow-down text-sm"></i>
-            </a>
-        </div>
+    <!-- Hero / Bagian Judul Utama -->
+    <section class="hero">
+        <h2>Alat-Alat Jaringan Komputer</h2>
+        <p>Mengenal berbagai perangkat keras pendukung infrastruktur jaringan internet dan lokal yang handal.</p>
     </section>
 
-    <!-- Main Content: Daftar Alat Jaringan -->
-    <main id="alat" class="max-w-6xl mx-auto px-6 py-12 flex-grow">
-        <div class="text-center mb-12">
-            <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Perangkat Jaringan Utama</h3>
-            <p class="text-slate-500 mt-2">Berikut adalah beberapa alat penting dalam infrastruktur jaringan.</p>
+    <!-- Konten Utama: Daftar Perangkat -->
+    <main>
+        <div class="section-title">
+            <h3>Daftar Perangkat Jaringan</h3>
+            <p>Berikut adalah beberapa komponen penting yang digunakan dalam sistem jaringan.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Card 1: Router -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-blue-100 transition duration-300 flex flex-col justify-between">
+        <div class="grid-container">
+            <!-- 1. Router -->
+            <div class="card">
                 <div>
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-xl">
-                        <i class="fa-solid fa-router"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Router</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Berfungsi untuk menghubungkan beberapa jaringan yang berbeda (misalnya jaringan lokal ke internet) dan mengatur jalur pengiriman paket data (routing).
-                    </p>
+                    <div class="card-icon"><i class="fa-solid fa-router"></i></div>
+                    <h4>Router</h4>
+                    <p>Berfungsi untuk menghubungkan beberapa jaringan berbeda dan mengatur jalur terbaik pengiriman paket data (routing) antar jaringan.</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-blue-600 font-semibold uppercase tracking-wider">
-                    Layer 3 (Network Layer)
-                </div>
+                <div class="card-footer">Layer 3 (Network Layer)</div>
             </div>
 
-            <!-- Card 2: Switch -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-blue-100 transition duration-300 flex flex-col justify-between">
+            <!-- 2. Switch -->
+            <div class="card">
                 <div>
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-xl">
-                        <i class="fa-solid fa-server"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Switch / Hub</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Menghubungkan berbagai perangkat dalam satu jaringan lokal (LAN) yang sama dan meneruskan data secara spesifik ke perangkat tujuan.
-                    </p>
+                    <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+                    <h4>Switch</h4>
+                    <p>Menghubungkan berbagai perangkat komputer dalam satu jaringan lokal (LAN) dan meneruskan data secara spesifik ke perangkat tujuan.</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-blue-600 font-semibold uppercase tracking-wider">
-                    Layer 2 (Data Link Layer)
-                </div>
+                <div class="card-footer">Layer 2 (Data Link Layer)</div>
             </div>
 
-            <!-- Card 3: Kabel UTP & Konektor RJ45 -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-blue-100 transition duration-300 flex flex-col justify-between">
+            <!-- 3. Kabel UTP & RJ45 -->
+            <div class="card">
                 <div>
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-xl">
-                        <i class="fa-solid fa-ethernet"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Kabel UTP & RJ45</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Media transmisi fisik berupa kabel tembaga berpilin (Unshielded Twisted Pair) yang dipasangkan dengan konektor RJ45 untuk koneksi kabel LAN.
-                    </p>
+                    <div class="card-icon"><i class="fa-solid fa-ethernet"></i></div>
+                    <h4>Kabel UTP & RJ45</h4>
+                    <p>Media transmisi fisik berbasis tembaga berpilin yang dipasangkan dengan konektor RJ45 untuk transmisi data kabel LAN.</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-blue-600 font-semibold uppercase tracking-wider">
-                    Media Transmisi Fisik
-                </div>
+                <div class="card-footer">Media Transmisi Fisik</div>
             </div>
 
-            <!-- Card 4: Access Point -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-blue-100 transition duration-300 flex flex-col justify-between">
+            <!-- 4. Access Point -->
+            <div class="card">
                 <div>
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-xl">
-                        <i class="fa-solid fa-wifi"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Access Point (AP)</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Memancarkan sinyal Wi-Fi untuk menghubungkan perangkat nirkabel (seperti laptop dan <em>smartphone</em>) ke jaringan lokal atau internet.
-                    </p>
+                    <div class="card-icon"><i class="fa-solid fa-wifi"></i></div>
+                    <h4>Access Point</h4>
+                    <p>Memancarkan sinyal Wi-Fi agar perangkat nirkabel seperti laptop dan smartphone dapat terhubung ke jaringan lokal/internet.</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-blue-600 font-semibold uppercase tracking-wider">
-                    Wireless Networking
-                </div>
+                <div class="card-footer">Wireless Networking</div>
             </div>
 
-            <!-- Card 5: LAN Card / NIC -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-blue-100 transition duration-300 flex flex-col justify-between">
+            <!-- 5. LAN Card -->
+            <div class="card">
                 <div>
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-xl">
-                        <i class="fa-solid fa-microchip"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">LAN Card (NIC)</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Perangkat keras antarmuka (Network Interface Card) yang dipasang pada komputer agar dapat terhubung ke jaringan kabel.
-                    </p>
+                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h4>LAN Card (NIC)</h4>
+                    <p>Kartu antarmuka jaringan yang dipasang pada perangkat komputer agar dapat tersambung menggunakan kabel jaringan.</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-blue-600 font-semibold uppercase tracking-wider">
-                    Hardware Komputer
-                </div>
+                <div class="card-footer">Hardware Komputer</div>
             </div>
 
-            <!-- Card 6: Modem -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-blue-100 transition duration-300 flex flex-col justify-between">
+            <!-- 6. Modem -->
+            <div class="card">
                 <div>
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4 text-xl">
-                        <i class="fa-solid fa-satellite-dish"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Modem</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Modulator Demodulator yang berfungsi mengubah sinyal analog dari penyedia layanan internet (ISP) menjadi sinyal digital, dan sebaliknya.
-                    </p>
+                    <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <h4>Modem</h4>
+                    <p>Mengubah sinyal analog dari penyedia layanan internet (ISP) menjadi sinyal digital yang bisa diproses oleh komputer.</p>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-100 text-xs text-blue-600 font-semibold uppercase tracking-wider">
-                    Internet Gateway
-                </div>
+                <div class="card-footer">Internet Gateway</div>
             </div>
-
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-blue-100 py-6 text-center text-sm text-slate-500 mt-12">
-        <p>&copy; 2026 Alat-Alat Jaringan Komputer. Dibuat dengan tema biru putih.</p>
+    <footer>
+        <p>&copy; 2026 Alat-Alat Jaringan Komputer. Desain Biru & Putih.</p>
     </footer>
 
 </body>
