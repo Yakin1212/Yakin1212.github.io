@@ -1,14 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alat-Alat Jaringan Komputer</title>
-    <!-- Google Fonts & FontAwesome untuk Ikon -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- CSS STYLING KHUSUS (Warna Biru & Putih) -->
+    <title>Alat-Alat Jaringan</title>
+
     <style>
         * {
             margin: 0;
@@ -17,260 +14,219 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* Putih kebiruan lembut */
-            color: #334155;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
         }
 
-        /* Header / Navbar */
         header {
-            background-color: #0284c7; /* Biru terang */
-            color: #ffffff;
-            padding: 1rem 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-
-        .logo i {
-            background: #ffffff;
-            color: #0284c7;
-            padding: 8px;
-            border-radius: 8px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #003b20, #00a84f);
+            padding: 35px 20px;
             text-align: center;
-            padding: 4rem 1.5rem;
+            border-bottom: 3px solid #00ff66;
         }
 
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+        header h1 {
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 10px;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            color: #e0f2fe;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
+        header p {
+            color: #d5ffe3;
+            font-size: 16px;
         }
 
-        /* Main Content & Grid */
-        main {
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            flex: 1;
-        }
-
-        .section-title {
+        nav {
+            background-color: #111111;
+            padding: 18px;
             text-align: center;
-            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #00cc55;
         }
 
-        .section-title h3 {
-            font-size: 2rem;
-            color: #0f172a;
-            font-weight: 700;
+        nav a {
+            color: #00ff66;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        .section-title p {
-            color: #64748b;
-            margin-top: 0.5rem;
+        nav a:hover {
+            color: white;
         }
 
-        .grid-container {
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #00ff66;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .alat-jaringan {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
         }
 
-        /* Card Alat Jaringan */
         .card {
-            background-color: #ffffff; /* Putih bersih */
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            background-color: #151515;
+            border: 1px solid #087f3d;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 255, 102, 0.08);
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.15);
-            border-color: #bae6fd;
+            transform: translateY(-8px);
+            border-color: #00ff66;
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.25);
         }
 
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            background-color: #e0f2fe; /* Biru muda */
-            color: #0284c7;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
+        .ikon {
+            font-size: 48px;
+            margin-bottom: 15px;
         }
 
-        .card h4 {
-            font-size: 1.2rem;
-            color: #1e293b;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+        .card h3 {
+            color: #00ff66;
+            margin-bottom: 12px;
+            font-size: 21px;
         }
 
         .card p {
-            font-size: 0.95rem;
-            color: #475569;
-            line-height: 1.5;
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.7;
         }
 
-        .card-footer {
-            margin-top: 1.5rem;
-            padding-top: 0.75rem;
-            border-top: 1px solid #f1f5f9;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #0284c7;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #ffffff;
-            border-top: 1px solid #e2e8f0;
+        .tentang {
+            background-color: #111111;
+            border-left: 4px solid #00ff66;
+            padding: 25px;
+            border-radius: 8px;
             text-align: center;
-            padding: 1.5rem;
-            color: #64748b;
-            font-size: 0.9rem;
-            margin-top: 4rem;
+            line-height: 1.8;
+            color: #dddddd;
+        }
+
+        footer {
+            background-color: #050505;
+            border-top: 2px solid #00cc55;
+            color: #00ff66;
+            text-align: center;
+            padding: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Header / Navbar -->
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fa-solid fa-network-wired"></i>
-                <span>NetTools ID</span>
-            </div>
-        </div>
+    <header id="beranda">
+        <h1>ALAT-ALAT JARINGAN</h1>
+        <p>Mengenal Perangkat dan Fungsi Jaringan Komputer</p>
     </header>
 
-    <!-- Hero / Bagian Judul Utama -->
-    <section class="hero">
-        <h2>Alat-Alat Jaringan Komputer</h2>
-        <p>Mengenal berbagai perangkat keras pendukung infrastruktur jaringan internet dan lokal yang handal.</p>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#alat">Daftar Alat</a>
+        <a href="#tentang">Tentang</a>
+    </nav>
+
+    <section class="container" id="alat">
+        <h2>Daftar Alat Jaringan</h2>
+
+        <div class="alat-jaringan">
+
+            <div class="card">
+                <div class="ikon">🌐</div>
+                <h3>Router</h3>
+                <p>Perangkat yang menghubungkan beberapa jaringan dan mengarahkan paket data ke tujuan yang tepat.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">🔌</div>
+                <h3>Switch</h3>
+                <p>Perangkat untuk menghubungkan beberapa perangkat komputer dalam jaringan lokal (LAN).</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">📡</div>
+                <h3>Access Point</h3>
+                <p>Perangkat yang menyediakan koneksi jaringan nirkabel atau Wi-Fi untuk berbagai perangkat.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">🖧</div>
+                <h3>Modem</h3>
+                <p>Perangkat yang menghubungkan jaringan pengguna dengan layanan internet dari penyedia layanan.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">🔗</div>
+                <h3>Kabel UTP</h3>
+                <p>Kabel Ethernet yang digunakan untuk menghubungkan perangkat dalam jaringan komputer.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">🔧</div>
+                <h3>Tang Crimping</h3>
+                <p>Alat untuk memasang konektor RJ45 pada ujung kabel jaringan Ethernet.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">🧰</div>
+                <h3>LAN Tester</h3>
+                <p>Alat untuk menguji sambungan kabel jaringan dan memeriksa apakah kabel terhubung dengan benar.</p>
+            </div>
+
+            <div class="card">
+                <div class="ikon">🔩</div>
+                <h3>Konektor RJ45</h3>
+                <p>Konektor yang digunakan untuk menghubungkan kabel Ethernet ke perangkat jaringan.</p>
+            </div>
+
+        </div>
     </section>
 
-    <!-- Konten Utama: Daftar Perangkat -->
-    <main>
-        <div class="section-title">
-            <h3>Daftar Perangkat Jaringan</h3>
-            <p>Berikut adalah beberapa komponen penting yang digunakan dalam sistem jaringan.</p>
+    <section class="container" id="tentang">
+        <h2>Tentang Website</h2>
+        <div class="tentang">
+            Website Alat-Alat Jaringan dibuat untuk membantu
+            mempelajari nama, fungsi, dan kegunaan perangkat jaringan
+            komputer dengan tampilan sederhana bertema hijau dan hitam.
         </div>
+    </section>
 
-        <div class="grid-container">
-            <!-- 1. Router -->
-            <div class="card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-router"></i></div>
-                    <h4>Router</h4>
-                    <p>Berfungsi untuk menghubungkan beberapa jaringan berbeda dan mengatur jalur terbaik pengiriman paket data (routing) antar jaringan.</p>
-                </div>
-                <div class="card-footer">Layer 3 (Network Layer)</div>
-            </div>
-
-            <!-- 2. Switch -->
-            <div class="card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-server"></i></div>
-                    <h4>Switch</h4>
-                    <p>Menghubungkan berbagai perangkat komputer dalam satu jaringan lokal (LAN) dan meneruskan data secara spesifik ke perangkat tujuan.</p>
-                </div>
-                <div class="card-footer">Layer 2 (Data Link Layer)</div>
-            </div>
-
-            <!-- 3. Kabel UTP & RJ45 -->
-            <div class="card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-ethernet"></i></div>
-                    <h4>Kabel UTP & RJ45</h4>
-                    <p>Media transmisi fisik berbasis tembaga berpilin yang dipasangkan dengan konektor RJ45 untuk transmisi data kabel LAN.</p>
-                </div>
-                <div class="card-footer">Media Transmisi Fisik</div>
-            </div>
-
-            <!-- 4. Access Point -->
-            <div class="card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-wifi"></i></div>
-                    <h4>Access Point</h4>
-                    <p>Memancarkan sinyal Wi-Fi agar perangkat nirkabel seperti laptop dan smartphone dapat terhubung ke jaringan lokal/internet.</p>
-                </div>
-                <div class="card-footer">Wireless Networking</div>
-            </div>
-
-            <!-- 5. LAN Card -->
-            <div class="card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-                    <h4>LAN Card (NIC)</h4>
-                    <p>Kartu antarmuka jaringan yang dipasang pada perangkat komputer agar dapat tersambung menggunakan kabel jaringan.</p>
-                </div>
-                <div class="card-footer">Hardware Komputer</div>
-            </div>
-
-            <!-- 6. Modem -->
-            <div class="card">
-                <div>
-                    <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
-                    <h4>Modem</h4>
-                    <p>Mengubah sinyal analog dari penyedia layanan internet (ISP) menjadi sinyal digital yang bisa diproses oleh komputer.</p>
-                </div>
-                <div class="card-footer">Internet Gateway</div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Alat-Alat Jaringan Komputer. Desain Biru & Putih.</p>
+        <p>&copy; 2026 Alat-Alat Jaringan | Belajar Jaringan Komputer</p>
     </footer>
 
 </body>
 </html>
+
