@@ -5,228 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alat-Alat Jaringan</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
-
-        header {
-            background: linear-gradient(135deg, #003b20, #00a84f);
-            padding: 35px 20px;
-            text-align: center;
-            border-bottom: 3px solid #00ff66;
-        }
-
-        header h1 {
-            font-size: 36px;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            color: #d5ffe3;
-            font-size: 16px;
-        }
-
-        nav {
-            background-color: #111111;
-            padding: 18px;
-            text-align: center;
-            border-bottom: 1px solid #00cc55;
-        }
-
-        nav a {
-            color: #00ff66;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: white;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .container h2 {
-            text-align: center;
-            color: #00ff66;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
-
-        .alat-jaringan {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background-color: #151515;
-            border: 1px solid #087f3d;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 0 10px rgba(0, 255, 102, 0.08);
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: #00ff66;
-            box-shadow: 0 0 20px rgba(0, 255, 102, 0.25);
-        }
-
-        .ikon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #00ff66;
-            margin-bottom: 12px;
-            font-size: 21px;
-        }
-
-        .card p {
-            color: #cccccc;
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .tentang {
-            background-color: #111111;
-            border-left: 4px solid #00ff66;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-            line-height: 1.8;
-            color: #dddddd;
-        }
-
-        footer {
-            background-color: #050505;
-            border-top: 2px solid #00cc55;
-            color: #00ff66;
-            text-align: center;
-            padding: 22px;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 27px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 8px;
-            }
-
-            .container {
-                margin: 20px auto;
-                padding: 15px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header id="beranda">
+    <!-- Bagian Header -->
+    <header>
         <h1>ALAT-ALAT JARINGAN</h1>
-        <p>Mengenal Perangkat dan Fungsi Jaringan Komputer</p>
+        <p>Pusat Informasi Peralatan Jaringan Komputer</p>
     </header>
 
+    <!-- Menu Navigasi -->
     <nav>
         <a href="#beranda">Beranda</a>
-        <a href="#alat">Daftar Alat</a>
-        <a href="#tentang">Tentang</a>
+        <a href="#alat">Alat Jaringan</a>
+        <a href="#kontak">Kontak</a>
     </nav>
 
-    <section class="container" id="alat">
-        <h2>Daftar Alat Jaringan</h2>
+    <!-- Bagian Beranda -->
+    <section id="beranda">
+        <h2>Selamat Datang di Website Alat-Alat Jaringan</h2>
+        <p>
+            Website ini berisi informasi tentang berbagai alat jaringan
+            komputer yang digunakan untuk membangun dan menghubungkan
+            jaringan komputer.
+        </p>
+    </section>
 
-        <div class="alat-jaringan">
+    <!-- Daftar Alat Jaringan -->
+    <section id="alat">
+        <h2>Daftar Alat-Alat Jaringan</h2>
 
-            <div class="card">
-                <div class="ikon">🌐</div>
-                <h3>Router</h3>
-                <p>Perangkat yang menghubungkan beberapa jaringan dan mengarahkan paket data ke tujuan yang tepat.</p>
+        <div class="daftar-alat">
+            <div class="alat">
+                <h3>1. Router</h3>
+                <p>Berfungsi menghubungkan jaringan yang berbeda dan mengatur lalu lintas data.</p>
             </div>
 
-            <div class="card">
-                <div class="ikon">🔌</div>
-                <h3>Switch</h3>
-                <p>Perangkat untuk menghubungkan beberapa perangkat komputer dalam jaringan lokal (LAN).</p>
+            <div class="alat">
+                <h3>2. Switch</h3>
+                <p>Berfungsi menghubungkan beberapa perangkat dalam jaringan lokal (LAN).</p>
             </div>
 
-            <div class="card">
-                <div class="ikon">📡</div>
-                <h3>Access Point</h3>
-                <p>Perangkat yang menyediakan koneksi jaringan nirkabel atau Wi-Fi untuk berbagai perangkat.</p>
+            <div class="alat">
+                <h3>3. Kabel UTP</h3>
+                <p>Digunakan untuk menghubungkan komputer dengan perangkat jaringan.</p>
             </div>
 
-            <div class="card">
-                <div class="ikon">🖧</div>
-                <h3>Modem</h3>
-                <p>Perangkat yang menghubungkan jaringan pengguna dengan layanan internet dari penyedia layanan.</p>
+            <div class="alat">
+                <h3>4. Konektor RJ45</h3>
+                <p>Digunakan sebagai konektor pada kabel jaringan Ethernet.</p>
             </div>
 
-            <div class="card">
-                <div class="ikon">🔗</div>
-                <h3>Kabel UTP</h3>
-                <p>Kabel Ethernet yang digunakan untuk menghubungkan perangkat dalam jaringan komputer.</p>
+            <div class="alat">
+                <h3>5. Access Point</h3>
+                <p>Digunakan untuk menyediakan akses jaringan nirkabel atau Wi-Fi.</p>
             </div>
 
-            <div class="card">
-                <div class="ikon">🔧</div>
-                <h3>Tang Crimping</h3>
-                <p>Alat untuk memasang konektor RJ45 pada ujung kabel jaringan Ethernet.</p>
+            <div class="alat">
+                <h3>6. LAN Tester</h3>
+                <p>Digunakan untuk memeriksa sambungan dan kondisi kabel jaringan.</p>
             </div>
 
-            <div class="card">
-                <div class="ikon">🧰</div>
-                <h3>LAN Tester</h3>
-                <p>Alat untuk menguji sambungan kabel jaringan dan memeriksa apakah kabel terhubung dengan benar.</p>
+            <div class="alat">
+                <h3>7. Modem</h3>
+                <p>Digunakan untuk menghubungkan jaringan ke layanan internet melalui penyedia layanan.</p>
             </div>
 
-            <div class="card">
-                <div class="ikon">🔩</div>
-                <h3>Konektor RJ45</h3>
-                <p>Konektor yang digunakan untuk menghubungkan kabel Ethernet ke perangkat jaringan.</p>
+            <div class="alat">
+                <h3>8. Kabel Fiber Optik</h3>
+                <p>Digunakan untuk mengirimkan data dengan kecepatan tinggi melalui serat optik.</p>
             </div>
-
         </div>
     </section>
 
-    <section class="container" id="tentang">
-        <h2>Tentang Website</h2>
-        <div class="tentang">
-            Website Alat-Alat Jaringan dibuat untuk membantu
-            mempelajari nama, fungsi, dan kegunaan perangkat jaringan
-            komputer dengan tampilan sederhana bertema hijau dan hitam.
-        </div>
+    <!-- Informasi Kontak -->
+    <section id="kontak">
+        <h2>Informasi Kontak</h2>
+        <p><strong>Nama:</strong> Alat-Alat Jaringan</p>
+        <p><strong>Nomor Telepon:</strong>
+            <a href="tel:081234567890">0812-3456-7890</a>
+        </p>
+        <p><strong>Alamat:</strong> Jl. Contoh No. 10, Surabaya, Indonesia</p>
+        <p><strong>Email:</strong> alatjaringan@example.com</p>
     </section>
 
+    <!-- Bagian Footer -->
     <footer>
-        <p>&copy; 2026 Alat-Alat Jaringan | Belajar Jaringan Komputer</p>
+        <p>&copy; 2026 Alat-Alat Jaringan | Semua Hak Dilindungi</p>
     </footer>
 
 </body>
 </html>
-
