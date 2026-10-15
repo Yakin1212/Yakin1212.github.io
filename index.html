@@ -3,116 +3,313 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="nurul yakin" content="width=device-width, initial-scale=1.0">
-    <title>Alat-Alat Jaringan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mengenal berbagai alat jaringan komputer, fungsi, dan kegunaannya.">
+    <title>NetTech - Alat-Alat Jaringan Komputer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Alat-Alat Jaringan</h1>
-        <p>Mengenal berbagai perangkat jaringan komputer</p>
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">⌘</span> NetTech
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#peralatan">Peralatan</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#beranda">Beranda</a>
-        <a href="#alat">Daftar Alat</a>
-        <a href="#tentang">Tentang</a>
-    </nav>
-
     <main>
-        <section id="beranda" class="hero">
-            <h2>Selamat Datang!</h2>
-            <p>
-                Website ini membahas berbagai alat jaringan komputer
-                beserta fungsi dan kegunaannya.
-            </p>
-        </section>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="badge">DUNIA TEKNOLOGI JARINGAN</span>
 
-        <section id="alat">
-            <h2>Daftar Alat-Alat Jaringan</h2>
+                    <h1>Mengenal Alat-Alat
+                        <span>Jaringan Komputer</span>
+                    </h1>
 
-            <div class="container">
-
-                <div class="card">
-                    <h3>1. Router</h3>
                     <p>
-                        Router berfungsi menghubungkan beberapa jaringan
-                        dan mengarahkan paket data ke tujuan yang tepat.
+                        Pelajari berbagai perangkat jaringan komputer,
+                        mulai dari router hingga kabel UTP, beserta
+                        fungsi dan kegunaannya dalam membangun jaringan.
                     </p>
+
+                    <a href="#peralatan" class="btn">
+                        Jelajahi Peralatan &rarr;
+                    </a>
                 </div>
 
-                <div class="card">
-                    <h3>2. Switch</h3>
-                    <p>
-                        Switch menghubungkan beberapa perangkat dalam
-                        satu jaringan lokal atau LAN.
-                    </p>
-                </div>
+                <div class="hero-visual">
+                    <div class="network-circle circle-one"></div>
+                    <div class="network-circle circle-two"></div>
 
-                <div class="card">
-                    <h3>3. Modem</h3>
-                    <p>
-                        Modem berfungsi mengubah sinyal agar perangkat
-                        dapat berkomunikasi dengan jaringan internet.
-                    </p>
-                </div>
+                    <div class="network-symbol">⌘</div>
 
-                <div class="card">
-                    <h3>4. Kabel UTP</h3>
-                    <p>
-                        Kabel UTP digunakan untuk menghubungkan perangkat
-                        jaringan melalui koneksi kabel.
-                    </p>
+                    <span class="network-label label-one">ROUTER</span>
+                    <span class="network-label label-two">SWITCH</span>
+                    <span class="network-label label-three">NETWORK</span>
                 </div>
-
-                <div class="card">
-                    <h3>5. Access Point</h3>
-                    <p>
-                        Access point menyediakan koneksi jaringan nirkabel
-                        atau Wi-Fi bagi perangkat.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>6. LAN Card</h3>
-                    <p>
-                        LAN card merupakan perangkat jaringan yang
-                        memungkinkan komputer terhubung ke jaringan.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>7. Repeater</h3>
-                    <p>
-                        Repeater membantu memperkuat atau meregenerasi
-                        sinyal agar jangkauan jaringan lebih luas.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>8. Konektor RJ45</h3>
-                    <p>
-                        Konektor RJ45 digunakan pada ujung kabel Ethernet
-                        untuk menghubungkan kabel ke perangkat jaringan.
-                    </p>
-                </div>
-
             </div>
         </section>
 
-        <section id="tentang" class="about">
-            <h2>Tentang Website</h2>
-            <p>
-                Website Alat-Alat Jaringan dibuat untuk membantu
-                mempelajari nama, fungsi, dan kegunaan perangkat
-                jaringan komputer.
-            </p>
+        <!-- INFORMASI SINGKAT -->
+        <section class="stats">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>01</h3>
+                    <p>Perangkat Keras</p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>02</h3>
+                    <p>Media Transmisi</p>
+                </div>
+
+                <div class="stat-item">
+                    <h3>03</h3>
+                    <p>Konektivitas Jaringan</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KATALOG PERALATAN -->
+        <section class="equipment section" id="peralatan">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">KATALOG PERANGKAT</span>
+                    <h2>Alat-Alat Jaringan</h2>
+                    <p>
+                        Berikut beberapa perangkat yang sering digunakan
+                        untuk membangun dan mengelola jaringan komputer.
+                    </p>
+                </div>
+
+                <div class="equipment-grid">
+
+                    <!-- ROUTER -->
+                    <article class="equipment-card">
+                        <div class="card-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&w=700&q=80"
+                                alt="Perangkat router jaringan"
+                                loading="lazy"
+                            >
+                            <span class="card-number">01</span>
+                        </div>
+
+                        <div class="card-content">
+                            <span class="category">PERANGKAT JARINGAN</span>
+                            <h3>Router</h3>
+                            <p>
+                                Menghubungkan jaringan yang berbeda dan
+                                menentukan jalur pengiriman paket data.
+                            </p>
+                            <a href="#tentang" class="card-link">
+                                Pelajari fungsi &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- SWITCH -->
+                    <article class="equipment-card">
+                        <div class="card-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80"
+                                alt="Perangkat dan infrastruktur jaringan"
+                                loading="lazy"
+                            >
+                            <span class="card-number">02</span>
+                        </div>
+
+                        <div class="card-content">
+                            <span class="category">PERANGKAT JARINGAN</span>
+                            <h3>Switch</h3>
+                            <p>
+                                Menghubungkan beberapa perangkat dalam
+                                satu jaringan lokal atau LAN.
+                            </p>
+                            <a href="#tentang" class="card-link">
+                                Pelajari fungsi &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- ACCESS POINT -->
+                    <article class="equipment-card">
+                        <div class="card-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=700&q=80"
+                                alt="Perangkat elektronik jaringan"
+                                loading="lazy"
+                            >
+                            <span class="card-number">03</span>
+                        </div>
+
+                        <div class="card-content">
+                            <span class="category">JARINGAN NIRKABEL</span>
+                            <h3>Access Point</h3>
+                            <p>
+                                Menyediakan akses jaringan nirkabel agar
+                                perangkat dapat terhubung melalui Wi-Fi.
+                            </p>
+                            <a href="#tentang" class="card-link">
+                                Pelajari fungsi &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- KABEL UTP -->
+                    <article class="equipment-card">
+                        <div class="card-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80"
+                                alt="Kabel dan perlengkapan teknologi"
+                                loading="lazy"
+                            >
+                            <span class="card-number">04</span>
+                        </div>
+
+                        <div class="card-content">
+                            <span class="category">MEDIA TRANSMISI</span>
+                            <h3>Kabel UTP</h3>
+                            <p>
+                                Media penghantar data yang umum digunakan
+                                untuk koneksi Ethernet pada jaringan LAN.
+                            </p>
+                            <a href="#tentang" class="card-link">
+                                Pelajari fungsi &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- MODEM -->
+                    <article class="equipment-card">
+                        <div class="card-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80"
+                                alt="Perangkat elektronik"
+                                loading="lazy"
+                            >
+                            <span class="card-number">05</span>
+                        </div>
+
+                        <div class="card-content">
+                            <span class="category">AKSES INTERNET</span>
+                            <h3>Modem</h3>
+                            <p>
+                                Mengubah sinyal sesuai teknologi akses yang
+                                digunakan untuk menghubungkan jaringan ke
+                                layanan internet.
+                            </p>
+                            <a href="#tentang" class="card-link">
+                                Pelajari fungsi &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- LAN CARD -->
+                    <article class="equipment-card">
+                        <div class="card-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=80"
+                                alt="Komputer dan perangkat kerja"
+                                loading="lazy"
+                            >
+                            <span class="card-number">06</span>
+                        </div>
+
+                        <div class="card-content">
+                            <span class="category">KOMPONEN KOMPUTER</span>
+                            <h3>Network Interface Card</h3>
+                            <p>
+                                NIC atau kartu jaringan memungkinkan
+                                komputer terhubung ke jaringan melalui
+                                Ethernet atau teknologi nirkabel.
+                            </p>
+                            <a href="#tentang" class="card-link">
+                                Pelajari fungsi &rarr;
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TENTANG -->
+        <section class="about section" id="tentang">
+            <div class="container about-content">
+                <div class="about-visual">
+                    <div class="about-icon">🌐</div>
+                    <div class="about-caption">
+                        <span>NETWORKING</span>
+                        <strong>Menghubungkan Dunia</strong>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <span class="section-label">TENTANG JARINGAN</span>
+                    <h2>Apa Itu Jaringan Komputer?</h2>
+
+                    <p>
+                        Jaringan komputer adalah kumpulan dua atau lebih
+                        perangkat yang saling terhubung untuk bertukar data
+                        dan berbagi sumber daya.
+                    </p>
+
+                    <p>
+                        Perangkat seperti router, switch, access point,
+                        dan kabel jaringan memiliki fungsi yang berbeda,
+                        tetapi dapat bekerja bersama untuk mendukung
+                        komunikasi data.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>✓ Berbagi data dan file</li>
+                        <li>✓ Berbagi koneksi internet</li>
+                        <li>✓ Menghubungkan berbagai perangkat</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section class="contact section" id="kontak">
+            <div class="container contact-content">
+                <span class="section-label">MULAI BELAJAR</span>
+                <h2>Jelajahi Dunia Jaringan Komputer</h2>
+                <p>
+                    Pelajari fungsi setiap perangkat dan bangun pemahaman
+                    dasar tentang teknologi jaringan.
+                </p>
+                <a href="#peralatan" class="btn">
+                    Lihat Katalog Peralatan
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Alat-Alat Jaringan | Tugas Informatika</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo">
+                <span class="logo-icon">⌘</span> NetTech
+            </a>
+
+            <p>
+                &copy; 2026 NetTech. Website edukasi alat jaringan komputer.
+            </p>
+        </div>
     </footer>
 
 </body>
