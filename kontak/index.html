@@ -1,1 +1,58 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>KONTAK KAMI</h1>
+        <p>Silakan hubungi kami</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="peralatan.html">Peralatan</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+    <main class="container">
+        <section class="kartu">
+            <h2>Informasi Kontak</h2>
+            <p>Silakan gunakan informasi berikut untuk menghubungi kami.</p>
+
+            <p><strong>Nama:</strong> Admin Jaringan</p>
+            <p><strong>Email:</strong>
+                <a href="mailto:admin@example.com">admin@example.com</a>
+            </p>
+            <p><strong>Topik:</strong> Informasi peralatan jaringan komputer</p>
+
+            <h3 style="margin-top: 20px;">Kirim Pesan melalui Email</h3>
+            <form action="mailto:admin@example.com" method="post" enctype="text/plain">
+                <p>
+                    <label for="nama">Nama:</label><br>
+                    <input id="nama" name="Nama" type="text" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input id="email" name="Email" type="email" required>
+                </p>
+                <p>
+                    <label for="pesan">Pesan:</label><br>
+                    <textarea id="pesan" name="Pesan" rows="5" required></textarea>
+                </p>
+                <button class="tombol" type="submit">Kirim Email</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Layanan Alat-Alat Jaringan</p>
+    </footer>
+</body>
+</html>
+
